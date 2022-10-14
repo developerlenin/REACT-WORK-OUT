@@ -54,57 +54,69 @@
  
 			       <!-- bind  -->
 
-					function Myfun(){
-						console.log(this.Age);
-					}
-					let preson = {
-						name : "LENIN",
-						Age : 24
-					}
-					let b = Myfun.bind( preson);
-					Myfun = b
-					Myfun();
+	  var name1 ={firstname:"LENIN", lastname:"lenin", fullname:function(){return this.firstname+ " " +this.lastname;}}
+						
+		   var name2= {firstname:"LENIN C S",lastname:"lenin cs"};
+				  
+			  var Result = name1.fullname.bind(name2);
+				  
+				  console.log(Result());
 					
-					       <!-- Function  -->
+					       
+						 
+                      <!-- var word= ["Hi","Hello",]; -->
+					  
+					   	<!-- function normal(){ -->
+						
+						 <!-- var wordss=""; -->
+							
+							 <!-- for(let i=0;i<word.length;i++){ -->
+							
+							      <!-- wordss+= word[i]; -->
+							
+						           	<!-- console.log(normal()); -->
+									<!-- } -->
+								<!-- } -->
+						       
+							   <!-- Function  -->
     
-						 <!-- Normal Function -->
-                              
-						function normal(){
-							for(let i=0;i<arguments.length;i++){
-								console.log(arguments[i]);
-							}
+						 <!-- Normal Function  -->
+						 
+						function add(a,b){
+						 return a * b;
 						}
+						var ans=add(2,4);
+						 console.log(ans);
 						
 						<!-- Arrow Function -->
 
-						let Firstt = (...arrow)=>{
-							for(let i=0;i<arrow.length;i++){
-								console.log(arrow[i]);
-							}
-						}
+						var hello = () =>  "Hi";
 						
-						let Secondd = Name =>{
-							console.log(Name);
-						}
-						Secondd("lenin");
-
-						let Thirdd = Third => console.log("Nice to Meet "+ Third);
-						Thirdd("You lenin");
-
-
+						console.log(hello());
+						
+						var hi =(h) => "Hey"  + " " + h ;
+						
+						console.log(hi("Lenin"));
+						
+						
 						 <!-- CALL BACK FUNCTION  -->
-
-						function CallBack(GET){
-							console.log("First CallBack Function");
-							GET();
-						}
-						function CallBack1(){
-						   console.log("Second CallBack Function");
-						}
-						CallBack(CallBack1);
-
-
-
+                         
+						 function callone(hi){
+						 
+						 console.log(hi);
+						 }
+						 
+						 function calltwo(){
+						  callone("hello");
+						 }
+						 
+						 function callthree(){
+						  callone("Hey");
+						 }
+						 
+						
+						  callthree();
+						   calltwo();
 						 <!-- CALL BACK HELL FUNCTION -->
 
 						function CallBackHell(FUN,Total){
@@ -122,7 +134,27 @@
 						   console.log(Tot);
 						}
 						CallBackHell1(20);
-
+                    
+					   <!-- Set Time Out  -->
+					   
+					   var settime = setTimeout(set , 5000);
+					   
+					   function set (){
+					    console.log("Happy");
+					   }
+					   
+					   <!-- Set Interval -->
+					   
+					   var setinter = setInterval(set1,5000);
+					   var w="";
+					   function set1 (){
+					   w = "Hi"
+					   <!-- console.log(w); -->
+					   }
+					   
+					   
+					   
+					   
 
 			   
 		   </script>
